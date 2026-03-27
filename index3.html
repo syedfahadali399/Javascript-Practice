@@ -26,7 +26,7 @@
             create.textContent = randomColor()
             create.setAttribute("class", "show")
             body.appendChild(create)
-            // console.log(create);
+            console.log(create);
         }
 
         document.getElementById("start").addEventListener("click", function(){
@@ -37,17 +37,17 @@
         })
         
 
-        // const changeContent = function(){
-        //     document.querySelector("h1").innerHTML = "Pro Fahad"
-        // }
+        const changeContent = function(){
+            document.querySelector("h1").innerHTML = "Pro Fahad"
+        }
 
-        // const change = setTimeout(changeContent, 7000)
+        const change = setTimeout(changeContent, 7000)
 
-        // document.getElementById('stop').addEventListener("click", function(){
-        //     clearTimeout(change)
-        //     console.log("Stopped");
+        document.getElementById('stop').addEventListener("click", function(){
+            clearTimeout(change)
+            console.log("Stopped");
             
-        // })
+        })
     </script>
 </body>
 </html>
