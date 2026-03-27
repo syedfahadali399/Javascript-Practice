@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+    <h1>Fahad Gamerz</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+
+        let body = document.querySelector("body")
+
+        function randomColor() {
+            let random = Math.floor(Math.random() * 50) + 1
+            return random
+        }
+        
+        function Value() {
+            let create = document.createElement("div")
+            create.textContent = randomColor()
+            create.setAttribute("class", "show")
+            body.appendChild(create)
+            // console.log(create);
+        }
+
+        document.getElementById("start").addEventListener("click", function(){
+            const clear = setInterval(Value, 2000)  
+            document.getElementById("stop").addEventListener("click", function(){
+                clearInterval(clear)
+            })
+        })
+        
+
+        // const changeContent = function(){
+        //     document.querySelector("h1").innerHTML = "Pro Fahad"
+        // }
+
+        // const change = setTimeout(changeContent, 7000)
+
+        // document.getElementById('stop').addEventListener("click", function(){
+        //     clearTimeout(change)
+        //     console.log("Stopped");
+            
+        // })
+    </script>
+</body>
+</html>
