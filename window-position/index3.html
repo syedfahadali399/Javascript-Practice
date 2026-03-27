@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll Detector</title>
+</head>
+<body style="height: 2000px">
+  <h1>Scroll to see effect</h1>
+  <p id="scrollInfo"></p>
+
+  <script>
+    const scrollInfo = document.getElementById("scrollInfo");
+
+    window.addEventListener("scroll", () => {
+      scrollInfo.textContent = `ScrollX: ${window.scrollX}, ScrollY: ${window.scrollY}`;
+    });
+  </script>
+</body>
+</html>

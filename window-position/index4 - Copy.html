@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Screen Position</title>
+</head>
+<body>
+  <h1>Window Screen Position</h1>
+  <p id="position"></p>
+
+  <script>
+    const position = document.getElementById("position");
+
+    // Show window's position on the screen
+    position.textContent = `Window is positioned at X: ${window.screenX}, Y: ${window.screenY}`;
+  </script>
+</body>
+</html>

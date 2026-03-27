@@ -1,0 +1,64 @@
+// myMath.js
+
+// Default export
+export default function add(x,y){
+    return x + y
+}
+
+// Normal export
+export function subtract(x,y){
+    return x - y
+}
+
+// Multiple exports
+function multiply(x,y){
+    return x * y
+}
+function duplicate(x){
+    return x * 2
+}
+export {
+    multiply,
+    duplicate
+}
+
+// that we how we import this in other file
+// // main.js
+// import add, { subtract, multiply, duplicate } from './myMath.js';
+
+// console.log(add(6, 2)); // 8 
+// console.log(subtract(6, 2)) // 4
+// console.log(multiply(6, 2)); // 12
+// console.log(duplicate(5)) // 10
+
+// myMath.js
+
+function add(x,y){
+    return x + y
+}
+function subtract(x,y){
+    return x - y
+}
+function multiply(x,y){
+    return x * y
+}
+function duplicate(x){
+    return x * 2
+}
+
+// Multiple exports in node.js
+module.exports = {
+    add,
+    subtract,
+    multiply,
+    duplicate
+}
+
+// main.js
+// that we how we impoprt this in other file
+// const myMath = require('./myMath.js')
+
+// console.log(myMath.add(6, 2)); // 8 
+// console.log(myMath.subtract(6, 2)) // 4
+// console.log(myMath.multiply(6, 2)); // 12
+// console.log(myMath.duplicate(5)) // 10
